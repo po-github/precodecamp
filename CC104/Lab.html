@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h><strong>1.Attribute ของ tag มีอะไรบ้างและใช้งานอย่างไร</strong></h> <br><br>
+    <table border="">
+        <thead>
+            <!-- แถว1 (หัวตาราง) -->
+            <tr align="Left">
+                <!-- คอมลัม1 -->
+                <th>tag</th>
+                <!-- คอมลัม2 -->
+                <th>attribute</th>
+                <!-- คอมลัม3 -->
+                <th>how to use</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr align="left">
+                <td>h , p ,<br>
+                    div , ul ,<br>
+                    table , form ,<br>
+                    button 
+                </td>
+                <td> <br><strong>Global attribute</strong><br>
+                        accesskey<br>
+                        class<br>
+                        contenteditable<br>
+                        data-*<br>
+                        dir<br>
+                        draggable<br>
+                        dropzone<br>
+                        hidden<br>
+                        id<br>
+                        lang<br>
+                        spellcheck<br>
+                        style<br>
+                        tabindex<br>
+                        title<br>
+                        translate<br>
+                        onafterprint<br>
+                        onbeforeprint<br>
+                        onbeforeunload<br>
+                        onerror<br>
+                        onhashchange<br>
+                        onload<br>
+                        onmessage<br>
+                        onoffline<br>
+                        ononline<br>
+                        onpagehide<br>
+                        onpageshow<br>
+                        onpopstate<br>
+                        onresize<br>
+                        onstorage<br>
+                        onunload<br>
+                     <strong>Form Event attribute</strong><br>
+                        onblur<br>
+                        onchange<br>
+                        oncontextmenu<br>
+                        onfocus<br>
+                        oninput<br>
+                        oninvalid<br>
+                        onreset<br>
+                        onsearch<br>
+                        onselect<br>
+                        onsubmit<br>
+                     <strong>Keyboard Event attribute</strong><br>
+                        onkeydown<br>
+                        onkeypress<br>
+                        onkeyup<br>
+                     <strong>Mouse Event attribute</strong><br>
+                        onclick<br>
+                        ondblclick<br>
+                        onmousedown<br>
+                        onmousemove<br>
+                        onmouseout<br>
+                        onmouseover<br>
+                        onmouseup<br>
+                        onmousewheel<br>
+                        onwheel<br>
+                     <strong>Drag Event attribute</strong><br>
+                        ondrag<br>
+                        ondragend<br>
+                        ondragenter<br>
+                        ondragleave<br>
+                        ondragover<br>
+                        ondragstart<br>
+                        ondrop<br>
+                        onscroll<br>
+                     <strong>Clipboard Event attribute</strong><br>
+                        oncopy<br>
+                        oncut<br>
+                        onpaste<br>
+                     <strong>Media Event attribute</strong><br>
+                        onabort<br>
+                        oncanplay<br>
+                        oncanplaythrough<br>
+                        oncuechange<br>
+                        ondurationchange<br>
+                        onemptied<br>
+                        onended<br>
+                        onerror<br>
+                        onloadeddata<br>
+                        onloadedmetadata<br>
+                        onloadstart<br>
+                        onpause<br>
+                        onplay<br>
+                        onplaying<br>
+                        onprogress<br>
+                        onratechange<br>
+                        onseeked<br>
+                        onseeking<br>
+                        onstalled<br>
+                        onsuspend<br>
+                        ontimeupdate<br>
+                        onvolumechange<br>
+                        onwaiting
+                </td>
+                <td align="left"> <br> <br>
+                
+                    Specifies a shortcut key to activate/focus an element<br>
+                    Specifies one or more classnames for an element (refers to a class in a style sheet)<br>
+                    Specifies whether the content of an element is editable or not<br>
+                    Used to store custom data private to the page or application<br>
+                    Specifies the text direction for the content in an element<br>
+                    Specifies whether an element is draggable or not<br>
+                    Specifies whether the dragged data is copied, moved, or linked, when dropped<br>
+                    Specifies that an element is not yet, or is no longer, relevant<br>
+                    Specifies a unique id for an element<br>
+                    Specifies the language of the element's content<br>
+                    Specifies whether the element is to have its spelling and grammar checked or not<br>
+                    Specifies an inline CSS style for an element<br>
+                    Specifies the tabbing order of an element<br>
+                    Specifies extra information about an element<br>
+                    Specifies whether the content of an element should be translated or not<br>
+                    Script to be run after the document is printed<br>
+                    Script to be run before the document is printed<br>
+                    Script to be run when the document is about to be unloaded<br>
+                    Script to be run when an error occurs<br>
+                    Script to be run when there has been changes to the anchor part of the a URL<br>
+                    Fires after the page is finished loading<br>
+                    Script to be run when the message is triggered<br>
+                    Script to be run when the browser starts to work offline<br>
+                    Script to be run when the browser starts to work online<br>
+                    Script to be run when a user navigates away from a page<br>
+                    Script to be run when a user navigates to a page<br>
+                    Script to be run when the window's history changes<br>
+                    Fires when the browser window is resized<br>
+                    Script to be run when a Web Storage area is updated<br>
+                    Fires once a page has unloaded (or the browser window has been closed)<br>
+                    <br>
+                    Fires the moment that the element loses focus<br>
+                    Fires the moment when the value of the element is changed<br>
+                    Script to be run when a context menu is triggered<br>
+                    Fires the moment when the element gets focus<br>
+                    Script to be run when an element gets user input<br>
+                    Script to be run when an element is invalid<br>
+                    Fires when the Reset button in a form is clicked<br>
+                    Fires when the user writes something in a search field (for <input="search">)<br>
+                    Fires after some text has been selected in an element<br>
+                    Fires when a form is submitted<br>
+                    <br>
+                    Fires when a user is pressing a key<br>
+                    Fires when a user presses a key<br>
+                    Fires when a user releases a key<br>
+                    <br>
+                    Fires on a mouse click on the element<br>
+                    Fires on a mouse double-click on the element<br>
+                    Fires when a mouse button is pressed down on an element<br>
+                    Fires when the mouse pointer is moving while it is over an element<br>
+                    Fires when the mouse pointer moves out of an element<br>
+                    Fires when the mouse pointer moves over an element<br>
+                    Fires when a mouse button is released over an element<br>
+                    Deprecated. Use the onwheel attribute instead<br>
+                    Fires when the mouse wheel rolls up or down over an element<br>
+                    <br>
+                    Script to be run when an element is dragged<br>
+                    Script to be run at the end of a drag operation<br>
+                    Script to be run when an element has been dragged to a valid drop target<br>
+                    Script to be run when an element leaves a valid drop target<br>
+                    Script to be run when an element is being dragged over a valid drop target<br>
+                    Script to be run at the start of a drag operation<br>
+                    Script to be run when dragged element is being dropped<br>
+                    Script to be run when an element's scrollbar is being scrolled<br>
+                    <br>
+                    Fires when the user copies the content of an element<br>
+                    Fires when the user cuts the content of an element<br>
+                    Fires when the user pastes some content in an element<br>
+                    <br>
+                    Script to be run on abort<br>
+                    Script to be run when a file is ready to start playing (when it has buffered enough to begin)<br>
+                    Script to be run when a file can be played all the way to the end without pausing for buffering<br>
+                    Script to be run when the cue changes in a <track> element<br>
+                    Script to be run when the length of the media changes<br>
+                    Script to be run when something bad happens and the file is suddenly unavailable (like unexpectedly disconnects)<br>
+                    Script to be run when the media has reach the end (a useful event for messages like "thanks for listening")<br>
+                    Script to be run when an error occurs when the file is being loaded<br>
+                    Script to be run when media data is loaded<br>
+                    Script to be run when meta data (like dimensions and duration) are loaded<br>
+                    Script to be run just as the file begins to load before anything is actually loaded<br>
+                    Script to be run when the media is paused either by the user or programmatically<br>
+                    Script to be run when the media is ready to start playing<br>
+                    Script to be run when the media actually has started playing<br>
+                    Script to be run when the browser is in the process of getting the media data<br>
+                    Script to be run each time the playback rate changes (like when a user switches to a slow motion or fast forward mode)<br>
+                    Script to be run when the seeking attribute is set to false indicating that seeking has ended<br>
+                    Script to be run when the seeking attribute is set to true indicating that seeking is active<br>
+                    Script to be run when the browser is unable to fetch the media data for whatever reason<br>
+                    Script to be run when fetching the media data is stopped before it is completely loaded for whatever reason<br>
+                    Script to be run when the playing position has changed (like when the user fast forwards to a different point in the media)<br>
+                    Script to be run each time the volume is changed which (includes setting the volume to "mute")<br>
+                    Script to be run when the media has paused but is expected to resume (like when the media pauses to buffer more data)<br>
+
+
+                </td>
+            </tr>
+            
+            </tr>
+            
+            
+            <tr align="left">
+                <td>img</td>
+                <td>
+                    alt<br>
+                    crossorigin<br>
+                    height<br>
+                    ismap<br>
+                    longdesc<br>
+                    referrerpolicy<br>
+                    sizes<br>
+                    src<br>
+                    srcset<br>
+                    usemap<br>
+                    width
+                </td>
+                <td>
+                    Specifies an alternate text for an image<br>
+                    Allow images from third-party sites that allow cross-origin access to be used with canvas<br>
+                    Specifies the height of an image<br>
+                    Specifies an image as a server-side image-map<br>
+                    Specifies a URL to a detailed description of an image<br>
+                    Specifies which referrer to use when fetching the image<br>
+                    Specifies image sizes for different page layouts<br>
+                    Specifies the path to the image<br>
+                    Specifies the path to an image to use in different situations<br>
+                    Specifies an image as a client-side image-map<br>
+                    Specifies the width of an image
+                </td>
+            </tr>
+            
+            <tr align="left">
+                <td>a</td>
+                <td>
+                    download<br>
+                    href<br>
+                    hreflang<br>
+                    media<br>
+                    ping<br>
+                    referrerpolicy<br>
+                    rel<br>
+                    target<br>
+                    type
+                </td>
+                <td>
+                    Specifies that the target will be downloaded when a user clicks on the hyperlink<br>
+                    Specifies the URL of the page the link goes to<br>
+                    Specifies the language of the linked document<br>
+                    Specifies what media/device the linked document is optimized for<br>
+                    Specifies a space-separated list of URLs to which, when the link is followed, post requests with the body ping will be sent by the browser (in the background). Typically used for tracking.<br>
+                    Specifies which referrer to send<br>
+                    Specifies the relationship between the current document and the linked document<br>
+                    Specifies where to open the linked document<br>
+                    Specifies the media type of the linked document
+
+
+                </td>
+            </tr>
+            
+            <tr align="left">
+                <td>ol</td>
+                <td>
+                    reversed<br>
+                    start<br>
+                    type
+
+                </td>
+                <td>
+                    Specifies that the list order should be descending (9,8,7...)<br>
+                    Specifies the start value of an ordered list<br>
+                    Specifies the kind of marker to use in the list
+
+                </td>
+            </tr>
+
+            <tr align="left">
+                <td>form</td>
+                <td>
+                    accept-charset<br>
+                    action<br>
+                    autocomplete<br>
+                    enctype<br>
+                    method<br>
+                    name<br>
+                    novalidate<br>
+                    rel<br>
+                    target
+                </td>
+                <td>
+                    Specifies the character encodings that are to be used for the form submission<br>
+                    Specifies where to send the form-data when a form is submitted<br>
+                    Specifies whether a form should have autocomplete on or off<br>
+                    Specifies how the form-data should be encoded when submitting it to the server (only for method="post")<br>
+                    Specifies the HTTP method to use when sending form-data<br>
+                    Specifies the name of a form<br>
+                    Specifies that the form should not be validated when submitted<br>
+                    Specifies the relationship between a linked resource and the current document<br>
+                    Specifies where to display the response that is received after submitting the form
+                    
+                </td>
+            </tr>
+
+            <tr align="left">
+                <td>button</td>
+                <td>
+                    autofocus<br>
+                    disabled<br>
+                    form<br>
+                    formaction<br>
+                    formenctype<br>
+                    formmethod<br>
+                    formnovalidate<br>
+                    formtarget<br>
+                    name<br>
+                    type<br>
+                    value
+                </td>
+                <td>
+                    Specifies that a button should automatically get focus when the page loads<br>
+                    Specifies that a button should be disabled<br>
+                    Specifies which form the button belongs to<br>
+                    Specifies where to send the form-data when a form is submitted. Only for type="submit"<br>
+                    Specifies how form-data should be encoded before sending it to a server. Only for type="submit"<br>
+                    Specifies how to send the form-data (which HTTP method to use). Only for type="submit"<br>
+                    Specifies that the form-data should not be validated on submission. Only for type="submit"<br>
+                    Specifies where to display the response after submitting the form. Only for type="submit"<br>
+                    Specifies a name for the button<br>
+                    Specifies the type of button<br>
+                    Specifies an initial value for the button
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <br><br>
+    <hr>
+    <hr>
+
+<h><strong>2.ความเหมือนและความแตกต่างระห่าง 2 tag </strong></h> <br><br>
+     <table border="">
+         <thead>
+             <tr align="center">
+                 <th>tag</th>
+                 <th>ความเหมือนและความแตกต่าง</th>
+                 
+             </tr>
+
+         </thead>
+         <tbody>
+             <tr align="center">
+                 <td>hr กับ br</td>
+                 <td> hr ใช้สำหรับหรับขีดเส้นกั้น <br>
+                      br ใช้สำหรับขึ้นบรรทัดถัดไป
+                </td>
+                 
+             </tr>
+             <tr align="center">
+                 <td>ul กับ ol</td>
+                 <td>
+                     ul ใช้ในการสร้าง list แบบเป็น bullet<br>
+                     ol ใช้ในการสร้าง list แบบเป็น ลำดับ
+                 </td>
+                 
+             </tr>
+             <tr align="center">
+                 <td>select,checkbox และ radio button</td>
+                 <td>สิ่งที่เหมือนกันของทั้ง 3 คำสั่งคือใช้เมื่อต้องการสร้างตัวเลือก<br>
+                     แตกต่างกันตรงที่ ลักษณะ select จะเป็น dropdown list ส่วน<br>
+                     checkbox กับ radio button เป็นที่สำหรับทำเครื่องหมายโดยนอกจากนี้<br>
+                     Checkbox ต่างกับ radio button ตรงที่ checkbox สามารถเลือกได้หลายตัวเลือก<br>
+                     ส่วน radio button เลือกได้เพียง 1 ตัวเลือกเท่านั้น
+
+                 </td>
+                 
+             </tr>
+             <tr align= "center">
+                 <td>div กับ span</td>
+                 <td>div ต่อ 1 tag กินเนื้อที่ 1 บรรทัด<br>
+                     ส่วนspan ไม่ว่ากี่ tag ก็จะเอาเนื้อหาของเรามารียงไว้บรรทัดเดียวกัน
+
+                 </td>
+                 
+             </tr>
+             <tr align="center">
+                 <td>script กับ style</td>
+                 <td>script is used to define a client-side script (JavaScript).<br>
+                     style is used to define style information for an HTML document.
+
+                 </td>
+                 
+             </tr>
+
+         </tbody>
+     </table>
+     <br><br>
+     <hr>
+     <hr>
+
+<h><strong>3.input type มีอะไรบ้าง แต่ละ type แต่ต่างกันอย่างไร</strong></h> <br><br>
+    <table border="">
+        <thead>
+            <tr align="center">
+                <th>type</th>
+                <th>ความแตกต่าง</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr align="center">
+                <td>
+                    input type="button"<br>
+                    input type="checkbox"<br>
+                    input type="color"<br>
+                    input type="date"<br>
+                    input type="datetime-local"<br>
+                    input type="email"<br>
+                    input type="file"<br>
+                    input type="hidden"<br>
+                    input type="image"<br>
+                    input type="month"<br>
+                    input type="number"<br>
+                    input type="password"<br>
+                    input type="radio"<br>
+                    input type="range"<br>
+                    input type="reset"<br>
+                    input type="search"<br>
+                    input type="submit"<br>
+                    input type="tel"
+                    input type="text" (default value)<br>
+                    input type="time"<br>
+                    input type="url"<br>
+                    input type="week"
+                </td>
+                <td>
+                    defines a clickable button<br>
+                    defines a checkbox.<br>
+                    is used for input fields that should contain a color.<br>
+                    is used for input fields that should contain a date.<br>
+                    specifies a date and time input field, with no time zone.<br>
+                    is used for input fields that should contain an e-mail address.<br>
+                    defines a file-select field and a "Browse" button for file uploads.<br>
+                    for hidden<br>
+                    for image<br> 
+                    allows the user to select a month and year.<br>
+                    defines a numeric input field.<br>
+                    defines a password field:<br>
+                    defines a radio button.<br>
+                    defines a control for entering a number whose exact value is not important (like a slider control). 
+                    Default range is 0 to 100. However,you can set restrictions on what numbers are accepted with the min,
+                    max, and step attributes:<br>
+                    defines a reset button that will reset all form values to their default values<br>
+                    is used for search fields (a search field behaves like a regular text field).<br>
+                    defines a button for submitting form data to a form-handler.<br>
+                    is used for input fields that should contain a telephone number.<br>
+                    defines a single-line text input field:<br>
+                    allows the user to select a time (no time zone).Depending on browser support, a time picker can show up in the input field.<br>
+                    is used for input fields that should contain a URL address.<br>
+                    allows the user to select a week and year.
+
+
+                </td>
+            </tr>
+            
+
+        </tbody>
+    </table>
+
+    
+    
+<body>
+    
+</body>
+</html>
