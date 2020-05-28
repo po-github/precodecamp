@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. การเขียน Inline CSS เป็นการใช้คำสั่ง CSS ในไฟล์ html โดยไม่ผ่านการเชื่อมโยงภายนอกกับ
+       ไฟล์ CSS เหมาะสำหรับการแก้ไขเล็กๆน้อยๆ 
+
+        <h1 style="property: value;"></h1>    สังเกตว่า inline ไม่จำเป็นต้องกำหนด idname หรือ classname 
+                                             เพราะคำสั่งมันสามารถใส่ในบรรทัดนี้ได้เลย จึงไม่ต้องกำหนดชื่อเพื่ออ้างถึงต่างกับ
+                                             internal และ external
+
+        
+        กำหนด attribute ชื่อว่า style ขึ้นมา ใส่เครื่องหมายเท่ากับแล้วจากนั้นใส่เครื่องหมาย
+        ฟันหนูครอบ declaration ไว้ ภายใน declaration ใส property ปิดด้วยเครื่องหมาย
+        colon ตามด้วย value ปิดด้วยเครื่องหมาย semi-colon
+
+    
+    2.การเขียน External CSS จะยกตัวอย่างโดยใช้ < link >
+      
+        <link rel="stylesheet"  href="___.CSS"> </link>
+
+        tag link ประกอบด้วย rel และ href โดยเราจะใส่ declaration ที่เป็นชื่อไฟล์ .CSS
+        ให้ใส่ภายในเครื่องหมายฟันหนูของ attribute href ซึ่งเป็นการ import คำสั่งของ CSS จากไฟล์ภายนอก
+        จากนั้นเข้าไปเขียนคำสั่งดังต่อไปนี้ในไฟล์ CSS ดูต่อในไฟล์ teststyle.css
+           
+               .selector {
+                           property: value; คุณสมบัติที่ 1 พร้อมค่ากำหนดของคุณสมบัติ
+                           property: value; คุณสมบัติที่ 2 พร้อมค่ากำหนดของคุณสมบัติ  
+                           property: value; คุณสมบัติที่ 3 พร้อมค่ากำหนดของคุณสมบัติ
+                         }
+               
+    3.การเขียน Internal CSS เป็นการเขียนคำสั่ง CSS ภายในไฟล์ html โดยไม่ได้เขียนคำสั่ง CSS ไว้ในบรรทัดเดียวกับ
+       element ที่เราต้องการตกแต่ง เราจะไปเขียนไว้ในบรรทัดอื่นที่แยกออกมา โดยเราจะอ้างถึง element ที่ต้องการตกแต่ง
+       ผ่านการใส่ < attribute > ....... < /attribute > ในตัวอย่างนี้คือ attribute : style โดยภายในที่
+       ...... ไว้เราจะใช้คำสั่ง selector ปีกกา
+
+         <h1 style="property: value;"></h1>
+             <style>
+                selector {
+                          property: value;
+                          property: value;
+                         }
+             </style> -->
+
+
+
+    <!-- ตัวอย่างลองทำจริง -->
+
+        <!-- Inline CSS -->
+       
+               <h1 style="color:crimson;">ทดสอบ Inline CSS</h1>
+
+
+
+</body>
+</html>

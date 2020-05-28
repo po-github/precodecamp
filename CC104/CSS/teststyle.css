@@ -1,0 +1,14 @@
+
+         การพิมพ์คำสั่งของ CSS แบบ external CSS จะอธิบายในไฟล์นี้กำหนด selector ที่ต้องการกำหนดค่า 
+         ซึ่ง selector จะเป็น ID name หรือ Class name ก็คือสิ้งที่อยู่ในเครื่องหมายฟันหนูของ 
+         class="_N_A_M_E_" หรือ id="_N_A_M_E_"
+
+
+            .selector { 
+                       property: value;
+                       property: value;
+                       property: value;
+                      }
+
+
+      
