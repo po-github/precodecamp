@@ -1,0 +1,226 @@
+
+
+/* 1. Tooltip container */
+.tooltip {
+    display: inline-block;
+    border-bottom: 1px solid black; /* If you want dots under the hoverable text */
+         }
+
+  /* คำอธิบาย
+     CSS ด้านบนเป็นการจัดรูปแบบของข้อความที่เราต้องการให้เอาเม้าส์ไปชี้แล้วมี tooltip text ซึ่งเป็นคำอธิบาย
+     แสดงขึ้นมาในที่นี้จะกำหนดให้เป็น inline มีเส้นใต้เป็นจุดสีดำขนาด 1 พิกเซล
+  */
+   
+/* Tooltip text */
+
+/* ใช้combinator descendant selector เลือก tag tooltiptext ทั้งหมดที่อยู่ใน tag tooltip ให้มี property ดังกำหนดในปีกกา */
+.tooltip .tooltiptext {
+
+    /* ซ่อนคำอธิบายที่อยู่ใน tooltip text ไว้ก่อน */
+    visibility: hidden;
+    
+    /* กำหนดความกว้างให้กล่องข้อความคำอธิบาย */
+    width: 120px;
+
+    /* ให้คำอธิบายมีตัวอักษรสีขาว */
+    color: #fff;
+    
+    /* ให้คำอธิบายอยู่ตรงกลางของกล่อง */
+    text-align: center;
+
+    /* ให้มีระยะห่างขอบ 6 */
+    padding: 6px;
+
+    /* ให้กล่องที่เรากำหนดค่าความกว้างด้วย padding ของคำอธิบายเมีพื้นหลังสีดำ */
+    background-color: black;
+    
+    /* ให้กล่องดังกล่าวมีขอบโค้ง 6 พิกเซล */
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    /* ทำให้ตำแหน่งของคำอธิบายเริ่มที่เดียวกับ parent element คือคำว่า hover over me ตรงนี้หากใช้ relative แทนจะมีเส้นใต้เหลืออยู่หลัง
+       คำว่า hover over me เนื่องจาก relative เป็นการอ้างอิงตำแหน่งเดิม ดังนั้นตำแหน่งเดิมของคำว่า tool tip text ซึ่งเป็นคำอธิบายของเรานั้น
+       ยังคงอยู่ด้านหลัง การใช้ position ผลักให้เปลี่ยนตำแหน่งจะไม่ผลักตัว border ไปด้วยจึงยังทำให้มีเส้นใต้อยู่ ถ้านึกภาพไม่ออกลองปิดคอมเม้น absolute
+       แล้วลองเปิดคอมเม้น relative ดูจะเห็นชัด*/
+    position: absolute;
+              /* absolute จะเริ่มซ้ายบนสุดของกล่อง ดังนั้นพอเรากำหนดให้ tooltip text เป็น absolute จึงไปปรากฏที่ ตน. เดียวกันกับ parent element 
+              จึงเหมือนกับว่าไม่มีเส้นใต้เกินมาแต่จริงๆแล้วมันทับกันอยู่ */
+
+    /* ทำให้ tool tip text มาแสดงอยู่ข้างหน้า  */
+    z-index: 1;   
+
+                     }
+
+
+  /* Show the tooltip text when you mouse over the tooltip container */
+/* ใช้ combinator descendant selector เลือกให้ tooltiptext ที่อยู่ใน tooltip ที่ถูกเม้าชี้มีคุณสมบัติในปีกกา */
+.tooltip:hover .tooltiptext {
+    /* ให้แสดงขึ้นมา ซึ่งจากเดิมเรา hide มันไว้ */
+    visibility: visible;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*2 pagination ใช้กรณีที่หน้าเว็บของเรามีหลายหน้าแล้วต้องการแบ่งเป็นหน้าๆ
+พร้อมกำหนดเลขหน้าให้เราคลิกเพื่อเปลี่ยนหน้าได้ */
+  
+
+  /* ทำให้เลขหน้าเรียงอยู่บรรทัดเดียวกัน */
+  .pagination {
+    display: inline-block;
+  }
+  
+
+  /* pagination a เป็นการจัดวางเลขหน้าว่าจะให้ตัวอักษรเป็นสีอะไรระยะห่างกันเท่าไหร่ */
+  .pagination a {
+    color: rgb(17, 76, 236);
+    padding: 8px 16px;
+    text-decoration: none;
+    /* การทำให้สีพื้นหลังที่ hoghlight เลขหน้าตอนเอาเม้าไปวางเปลี่ยนแบบดีเลย์หน่อยๆ ให้ดูสมูทขึ้นเวลาเม้าผ่าน */
+    transition: background-color .3s;}  
+    /* ให้ดีเลย์ 0.3 วินาที */
+
+
+  /* หน้าที่เราอยู่บัจจุบันเลขหน้ามีพื้นหลังสีเขียวเลขหน้าสีขาว */
+  .pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+   /* ทำให้เมื่อเอาเม้าไปวางที่เลขหน้าแล้วเกิดการ highlight ขึ้นมา */
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* 3.Navigation Bar ใช้ตกแต่ง list ที่ใส่ลิ้งสำหรับคลิกไปยังหน้าต่างๆเช่นหน้า home,news,contact และ about ของเว็บ */
+  ul {
+    list-style-type: none; 
+    /* ลบสัญลักษณ์ bullet ออก */
+    margin: 0;
+    padding: 0;
+  }
+
+
+  /* เปลี่ยนเป็น block เพื่อให้สามารถคลิกได้ที่พื้นที่ทั้งหมดของ list แต่ละ list พร้อมกำหนดความกว้างของ block ดังกล่าว */
+  li a {
+    display: block;
+    /* ปกติความกว้างของ block จะมีค่าเท่ากับ default ซึ่งเทากับ content แต่เราต้องการกำหนดให้กว้าง60พิกเซล */
+    /* width: 170px; */
+    color: #000;
+    /* ระยะห่างขอบพื้นที่ highlight กับข้อความ กว้าง*ยาว */
+    padding: 10px 16px;
+    /* ตัวอักษรเปล่าไม่มีการปรับแต่ง เช่นขีดเส้นใต้ ตัวเอียง....*/
+    text-decoration: none;
+    /* ระยะเวลาดีเลของสี hover เวลาเม้าผ่าน */
+    transition: background-color .2s;
+  }
+  
+
+   ul {
+    /* จะใช้ bullets เป็นสัญญลักษณ์อะไร >> ไม่ใส่(none) */
+    list-style-type: none; 
+    /* พื้นที่นอก border (margin) เป็น 0   */
+    margin: 0;
+    /* พื้นที่ highlight ข้อความ(padding) เป็น 0 */
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+  }
+
+  
+  /* list ไหนที่ถูกเม้าชี้จะต้องเปลี่ยนสี hightlight พื้นหลังเป็นสีเทาดำและ
+  สีตัวอักษรเป็นสีขาว */
+
+  /* li คือ list ใน ul a คือ link ดังนั้น li a คือ link ใน list ทั้งหมดที่อยู่ใน ul */
+  li a:hover {
+    background-color: #555;
+    color: white;
+  } 
+
+  /* จัดให้ตัวอักษรอยู่ตรงกลาง+มีเส้นคั้นระหว่าง block list */
+  li {
+    text-align: center;
+    border-bottom: 1px solid #555;
+  }
+
+  /* block สุดท้ายไม่ต้องมีเส้นคั้น */
+  li:last-child {
+    border-bottom: none;
+  }
+
+
+
+
+
+
+
+
+
+  /* 4.Dropdown */
+  .dropbtn {
+    background-color: rgb(173, 175, 173);
+    color: rgb(65, 65, 65);
+    text-decoration: none;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    /* เม้าชี้แล้วเปลี่ยนเป็นรูปมือชี้ */
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    /* ให้คำว่า สินค้า/บริการ, ดัชนี, ตราสารทุน, ตราสารหนี้ อยู่บรรทัดเียวกัน ปรับความกว้าง/ความสูงไม่ได้ */
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    /* ให้ลิ้งของคำว่า สินค้า/บริการ, ดัชนี, ตราสารทุน, ตราสารหนี้ แสดงเป็น block */
+    display: block;
+    /* กำหนดระยะ padding */
+    padding: 12px 16px;
+    /* สีตัวอักษร */
+    color: black;
+    /* ทำเป็นอักษรปกติไม่มีการปรับแต่ง */
+    text-decoration: none;
+    
+  }
+
+  /* ให้ลิ้งของคำว่า สินค้า/บริการ, ดัชนี, ตราสารทุน, ตราสารหนี้ มีสีพื้นหลังส่วน padding เปลี่ยนเป็นสี ขาว เมื่อเม้าชี้ */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }

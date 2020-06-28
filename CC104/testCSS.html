@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+ <!-- ***การลิ้งไฟล์ html นี้เพื่อไปดึงค่าที่กำหนดจาก ไฟล์ css ภายนอก ให้ใช้ tag link 
+    ตามด้วย attribute rel เพื่อบอกว่า เอกสารนี้จะมีความสัมพันธ์กับอีกเอกสารนึงแบบเป็น sheet กำหนด style
+    ของไฟล์ html นี้ ซึ่งเอกสารนั้นคือคือเอกสารที่อยู่ที่ลิ้งตามที่ attribute href ระบุ พอลิ้งเสร็จกลับไปที่หัวข้อ external css -->
+
+    <link rel="stylesheet" href="CSS/teststyle.css">   
+     <!-- = นำเข้าเอกสาร css แบบเป็น sheet กำหนด style เข้ามา -->
+       
+
 </head>
 <body>
     <!-- 1. การเขียน Inline CSS เป็นการใช้คำสั่ง CSS ในไฟล์ html โดยไม่ผ่านการเชื่อมโยงภายนอกกับ
@@ -39,22 +48,422 @@
        ...... ไว้เราจะใช้คำสั่ง selector ปีกกา
 
          <h1 style="property: value;"></h1>
-             <style>
+             <attribute>
                 selector {
                           property: value;
                           property: value;
                          }
-             </style> -->
+                        </attribute> -->
 
 
 
     <!-- ตัวอย่างลองทำจริง -->
 
-        <!-- Inline CSS -->
+<h1>1.) การใช้ inline/internal/external CSS</h1>
+
+        1.1)Inline CSS
        
-               <h1 style="color:crimson;">ทดสอบ Inline CSS</h1>
+               <h2 style="color:crimson;">ทดสอบ Inline CSS</h2>
+        
+        1.2)Internal CSS
+
+               <h2 class="heading_h1"  >ทดสอบ Internal CSS</h2> 
+               <style>
+                   .heading_h1{
+                               color:cyan
+                              }
+               </style>
+                
+
+            <!-- **** เมื่อกำหนด selector (idname หรือ classname) สำหรับอ้างอิงว่าจะใช้ CSS นั้นกับ element ไหนแล้ว
+                 ส่วนของ Internal CSS เวลาพิมพ์ให้เริ่มจาก tag attribute ที่ต้องการจะแต่ง เช่น
+                 ตัวอย่างด้านบนจะใช้ CSS ในการตกแต่ง style ของตัวอักษร internal css จะเริ่มด้วย < style >....... < /style >
+                 โดย ..... ให้ใส่ selector (idname/classname) แล้วระบุคุณสมบัติและค่าของคุณสมบัติลงในปีกกา
+                                                                                                 **** -->
+                       
+
+        1.3)External CSS
+                <!-- ก่อนที่จะไปหยิบค่าที่ระบุในไฟล์ CSS ซึ่งเป็นไฟล์ภายนอก ก่อนอื่นต้องทำการลิ้งไฟล์นี้กับไฟล์ .css ที่อยู่ภายนอกก่อน
+                ***โดยการลิ้งต้องลิ้งในส่วน < head >...< /head > ของไฟล์  html นี้นะ*** จำไว้!!!  เลื่อนไปดูข้างบน>>>>
+                
+                เมื่อลิ้งเสร็จแล้ว พิมพ์ตามข้างล่าง แล้วไปดูที่ไฟล์ css เราจะมาใช้ external css -->
+              
+               <h2 class="heading_h2">ทดสอบ External css</h2>
+
+               <br>
+               <br>
+
+
+
+
+
+
+
+
+<h1>2.)การใช้ pseudoclass และ pseudoelement</h1>  
+               
+            <!-- การเรียกใช้งาน Pseudoclass ไม่จำเป็นต้องกำหนด idname หรือ classname ในไฟล์ html
+            สามารถเรียกใช้โดยพิมพ์ชื่อ tag ที่ต้องการกำหนดเป็น Pseudoclass ได้เลย
+
+           ตัวอย่างที่1 เป็นการกำหนด Pseudoclass ให้กับ tag input ดังนั้นทุกที่ที่มี tag input จะโดน selector นี้สั่งว่าอยู่
+           เมื่อโดนติ๊ก(check) ขนาดจะกลายเป็น 40 x 40 px
+                 
+                ยกตัวอย่างการทำงานของ Pseudocode ผ่าน tag form แบบ input checkbox โดยเราจะกำหนดว่าเมื่อ
+                checkbox ถูกติ๊กจาก user แล้วตัวกล่องจะขยายใหญ่ขึ้นผ่านเงื่อนไข checked ซึ่งเป็น attribute  นึง -->
+
+               <form class="formcheckbox">
+                      <input type="checkbox" checked>น้อย</input>           
+                      <input type="checkbox" checked>ปานกลาง</input>
+                      <input type="checkbox" checked>มาก</input>                      
+               </form>
+               <br><br>
+               <!-- ยกตัวอย่างการทำงานของ Pseudocode ผ่าน tag div โดยกำหนดว่าถ้าเม้าเคลื่อนที่ผ่าน content ที่อยู่ใน
+               tag div จะให้มัน hover ไว้ -->
+               
+               <div>Lorem ipsum dolor sit amet.</div>
+               <div>Lorem ipsum dolor sit amet.</div>
+
+            <!-- การใช้งาน Pseudo-element -->
+
+               <div>
+                   <p>Lorem ipsum dolor sit amet.</p>          
+               </div>
+
+               <p>Lorem ipsum dolor sit amet.</p>
+
+
+
+
+
+
+
+
+
+<h1>3.) เรื่อง Combinator</h1> 
+          <!-- ประกอบด้วย
+          1. space (เว้นวรรค)  เอา tag < div > , < span > ทั้งหมดที่อยู่ใน idname หรืแ classname นั้น
+          2. child selector(>) เอา tag < div > , < span >  idname หรืแ classname นั้น
+          3. adjacent sibling selector(+)
+          4. genneral sibling selector(~) 
+
+        การพิมพ์ใน CSS   
+                  #idname............< div >, < span >    
+                  .classname...........< div >, < span >
+                  tag a ......... tag b 
+
+            กำหนด content ใน tag div หรือ span ขึ้นมาภายใน tag h2 -->
+            
+            <!-- 1. h2 for combinator >> space
+                     เป็น CSS ที่สั่งให้ tag ที่มี selector SpaceCombinator ทำงานดังนี้คือ
+                     ให้ tag div ที่อยู่ภายในทั้งหมดเป็นสีฟ้า
+                     ให้ tag span ที่อยู่ภายในทั้งหมดเป็นสีแดงมะเขือเทศ
+
+                     #SpaceCombinator div {
+                                           color: springgreen;
+                                         }
+             
+                     #SpaceCombinator span {
+                                            color: tomato;
+                                           } -->
+            <h2 id=SpaceCombinator>
+                <div>
+                     <div>Lorem, ipsum.</div>
+                     <div>Lorem, ipsum.</div>
+                     <span>Lorem.</span><span>Lorem.</span>
+                </div>
+                <div>Lorem, ipsum dolor.</div>
+                <div>Lorem, ipsum dolor.</div>
+
+                <span>Lorem, ipsum dolor.</span>
+                <span>Lorem, ipsum dolor.</span>
+                <span>Lorem, ipsum dolor.</span>
+            </h2>
+
+            <!-- 2. h2 for combinator >>  >
+                     เป็น CSS ที่สั่งให้ เลือก child ของ p ป็นสีม่วงก่อนหลังจากนั้น
+                     ทั้งหมดที่ไม่ใช่ child ของ p ให้เป็นสีน้ำตาล -->
+
+
+            <h2 class="combinatormore">
+                <p>
+                    <!-- span ที่เป็น child -->
+                    <span>span ที่เป็น chlid ของ tag p</span>
+
+
+                    <!-- ลูกของ child ของ tag p อีกที -->
+                    <span>
+                        <span>ลูกของ child ของ tag p อีกที</span>
+                        <span>ลูกของ child ของ tag p อีกที</span>
+                    </span>
+                </p>
+
+            </h2>
+
+            <!-- 3.h2 for combinator +  and   ~
+                     + เป็น combinator ที่สั่งให้ถัดจาก div 1 อันเป็นสี 
+                     ~ เป็น combinator ที่สั่งให้ถัดจาก div ทั้งหมดเป็นสี  -->
+             <h2>
+                 <div>+++++++++++++</div>
+                 <div class="combinatorplus">+++++++plus++++++</div>
+                 <div class="combinatorUnderAll">++++++UnderAll+++++++</div>
+                 <div>+++++++++++++</div>
+                 <div>+++++++++++++</div>
+
+
+
+
+
+
+
+<h1>4.)attribute selector</h1>
+              <!-- สร้าง tag form เพื่อสร้างฟอร์ม input แบบต่างๆเพื่อให้เห็นความแตกต่าง
+              โดยใช้ type แบบต่างๆกัน แต่เราจะใช้ title ในการอ้างอิงคำสั่ง attribute selector
+              attribute selector มีหลายคำสั่งสั่ง ดังนี้
+              [ attribute ]           หมายถึง ใช้ CSS นี้กับ attribute นั้น
+              [ attribute = value ]   หมายถึง ใช้ CSS นี้กับ attribute ที่เป็น value นั้น
+              [ attribute ~= value ]  หมายถึง ใช้ CSS นี้กับ attribute ที่มีตัวอักษรที่กำหนดใน "..." แต่ต้องไม่ติดกับอักษรอื่นๆ 
+              [ attribute |= value ]  หมายถึง ใช้ CSS นี้กับ attribute ที่ขึ้นต้นตัวอักษรที่กำหนดใน "..." หรือขึ้นต้นด้วย -
+              [ attribute ^= value ]  หมายถึง ใช้ CSS นี้กับ attribute ที่ขึ้นต้นด้วยค่าใน "......" ติดหรือไม่ติดกับตัวอักษรอื่นก็ได้
+              [ attribute $= value ]  หมายถึง ใช้ CSS นี้กับ attribute ที่ลงท้ายด้วยค่าใน "......"
+              [ attribute *= value ]  หมายถึง ใช้ CSS นี้กับ attribute ที่มีตัวอักษรใน "......" ทั้งหมด -->
+              <form>
+                  <input type="text" title="inptForm"><br><br>
+                  <input type="color" title="input this-color"><br><br>
+                  <input type="date" title="input-Form"><br><br>
+                  <input type="email" title="input_Form"><br><br>
+                  <input type="file" title="input//Form"><br><br>
+                  <input type="password" title="input Form"><br><br>
+                  <input type="search" title="this input search">
+              </form>         
+            
+
+
+
+
+
+ <h1>5.) เรื่อง Border</h1>
+         
+           <!-- border เป็นการใส่กรอบให้ข้อความดังนั้นเราจะใช้ html สร้าง content mี่เป็นข้อความขึ้นมาก่อน -->
+
+           <div class="borderparagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis 
+               nihil praesentium ipsum voluptatibus earum accusamus sint obcaecati Lorem ipsum dolor sit amet 
+               consectetur adipisicing elit. Minus, soluta. </div>
+
+
+
+
+
+                 
+<h1> 6. เรื่อง Table </h1>
+ 
+           <!-- การแต่งตารางด้วย CSS ก่อนอื่นเน้นว่าต้องมี html ที่เป็นตารางขึ้นมาก่อน -->
+
+           <!-- และต้องเขียนคำสั่งต่อไปนี้ในไฟล์ css ก่อนด้วย
+           table,
+           td,
+           th {
+
+              } 
+            -->
+            <!-- การแต่ง border ของตารางทำอะไรได้บ้างดังนี้
+            1. border: เป็การกำหนดกรอบให้ตาราง
+            2. border-collapse: 
+            3. border-spacing:
+            4. boder-side: ขนาดของตาราง
+            5. caption-side: คำอธิบายตาราง top  /  bottom
+            6. emthy-cell: แสดงตารางว่างหรือไม่แสดง
+            7. table-layout: fixed / auto ความกว้างเซลล์เท่ากันหรือตามความยาวข้อมูล -->
+            
+        <table class="boderOftable">
+            <caption>Caption of the table</caption>
+            <thead>
+               <tr>
+                   <th>1</th>
+                   <th>2</th>
+                   <th>3</th>
+               </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SSS</td>
+                    <td>FFF</td>
+                    <td>GGG</td>
+                </tr>
+                <tr>
+                    <td>SSS</td>
+                    <td>FFF</td>
+                    <td>GGG</td>
+                </tr>
+                <tr>
+                    <td>SSS</td>
+                    <td>FFF</td>
+                    <td>GGG</td>>
+                </tr>
+                <tr>
+                    <td>SSS</td>
+                    <td>FFF</td>
+                    <td>GGG</td>
+                </tr>
+
+            </tbody>
+        </table>
+ 
+
+
+
+<h1>6. เรื่อง Image : การปรับแต่งรูปภาพด้วย css</h1>
+
+       <!-- การแต่งรูปภาพด้วย css มีคำสั่งที่ใช้ได้ดังนี้
+          1. border: ขอบ
+          2. border-radius: มุมของขอบ
+          3. height: ความสูงของรูปภาพ
+          4. width: ความกว้างของภาพ
+          5. opacity: ความโปร่งใส
+          6. background-color: สีพื้นหลัง
+          7. background-image: ตามด้วย "url ของรูปภาพ" = ตั้งภาพนั้นเป็นพื้นหลัง
+          8. background-repeat: ให้รูซ้ำกันในแนวนอนหรือแนวตั้ง repeat-x / repeat-y
+          9. background-attachment: การยึดหรือไม่ยึดรูปภาพนั้น
+          10.background-position: : ตำแหน่งรูปภาพ
+        -->
+
+
+  <!-- ก่อนอื่นต้องมีรูปภาพก่อน ถึงจะแต่งได้ -->
+    <img src="https://goldenretrieversociety.com/wp-content/uploads/2020/03/Golden-Retriever-Teeth-Care.png" alt="">
+   
+    <!-- มีรูปแล้ว ไปดูใน css ได้ -->
+<br>
+<br>
+<br>
+
+<h2> เรื่องย่อยของ image >>> background</h2>
+     
+       <!-- สมมติกล่องขึ้นมา 1 อันอยากให้มีพื้นหลังสีต่างๆ ก็ต้องสร้างกล่องขึ้นมา 1 อันโดยจะยกตัวอย่างเป็น div -->
+
+       <div class="bgtest"> sdfvsfvsv</div> 
+
+       <!-- หรือ -->
+<br><br>
+
+       <div class="พื้นหลังรูปภาพ">fdkjfvk</div>
+
+
+<br>
+<br>
+<br>
+
+<h1>9. เรื่อง padding และ margin</h1>
+
+    <h3>การพิมพ์คำสั่งทั้งสองอันนี้จะเป็นแบบ short hand ทั้งคู่ <br>
+
+    padding:(1,2,3,4.) <br>
+                       1.top ความกว้างด้านบน<br>
+                       2.right ความกว้างด้านขวา<br>
+                       3.bottom ความกว้างด้านล่าง<br>
+                       4.left ความกว้างด้านซ้าย<br>
+    โดยที่ padding คือ อารมพื้นที่เวลาเราเราขีด highlight ข้อความอ่ะว่าจะให้ บน-ขวา-ล่าง-ซ้าย กว้างแค่ไหน<br>
+
+    margin:(1,2,3,4) ค่าในวงเล็บเหมือน padding เลย<br> 
+    โดยที่ margin คือพื้นที่รอบสี hightlight ที่เราขีดอีกที<br>
+    นอกจากนี้ margin ยังมีคำสั่ง margin: auto; ซึ่งใช้เมื่อต้องการให้ element นั้นอยู่ตรงกลางหน้าจอ<br>  
+    margin ใช้กับ block level เท่านั้น รู้แค่นี้ 5555</h3>
+
+้<h1>10. เรื่อง display</h1>
+ 
+      <h3>เป็นคำสั่งที่ใช้ในการกำหนดให้ element ใน html เป็น inline level , block level หรือ
+          เปลี่ยนจากเดิมที่เป็น tag p ไปเป็น tag span ได้เลย หรือเปลี่ยนจาก tag span เป็น tag p 
+          ยังสามารถใช้ปรับแต่งหน้าจอแสดงผลได้อีก 2 แบบ คือ จัดเป็นแบบ flex และ grid </h3>
+
+      <h2>การจัดรูปแบบข้อมูลในแนวนอน >>> justify</h2>
+    
+      <h3>การจัดรูปแบบของ block element เราสามรรถจัด block ในแนวนอนได้ด้วย
+       คำสั่ง justify content โดยคำสั่ง justify ของ flex กับของ grid จะมีตางกันเล็กน้อย
+       ตรงที่ flex-start กับ flex-end  ส่วน grid จะพิมพ์แค่ start กับ end เฉยๆ 
+       ส่วน grid จะมีคำสั่งเพิ่มขึ้นมาที่ flex ไม่มีคือ space-evently</h3><br><br>
+
+
+       <h3>จำไว้ว่าถ้าเราจะจัดตัว block element ในแนวนอน ภายใต้การใช้ flex และ grid
+           gเราจะใช้คำสั่ง justify
+       </h3>
+    
+       <h2>การจัดรูปแบบข้อมูลในแนวตั้ง >>> align</h2>
+
+<!-- ยกตัวอย่างการใช้ display
+      tag p เป็น block
+      tag span เป็น inline -->
+
+        <p class="displaytest">HTML by tag p</p>
+        <span>HTML by tag span</span>
+
+
+้้<h1>11. เรื่อง Grid layout</h1>
+       
+          <!-- การจัดรูปแบบ แบบ grid ต้องมีการพิมพ์ display: grid 
+          ใน container ก่อนเสมอ -->
+
+  <h3>ข้อมูลที่จะจัดด้วย grid layout ต้องมีส่วนประกอบ 2 อย่างก่อน<br>
+  คือ 1. element ที่เป็น parent ทำหน้าที่เป็น container <br> 
+     2. element ที่เป็น child ทำหน้าที่เป็น item จะยกตัวอย่างด้วยการใช้ div</h3>
+
+     <div class="gridcontainer">
+
+         <div class="griditem1">item ที่ 1</div>
+         <div class="griditem2">item ที่ 2</div>
+         <div class="griditem3">item ที่ 3</div>
+         <div class="griditem4">item ที่ 4</div>
+         <div class="griditem5">item ที่ 5</div>
+
+     </div>
+     
+  <!-- ได้แล้วไปแต่งด้วย CSS   <<< ดูไฟล์ CSS -->
+
+
+  <h1>12. flex box layout</h1>
+     
+        <h2>คำสั่งสำหรับ container</h2>
+         <!-- การจัดรูปแบบ แบบ grid ต้องมีการพิมพ์ display: grid 
+             ใน container ก่อนเสมอ -->
+            <h3>
+             flex-direction: ใช้กำหนดรูปแบบของ item แบบ row หรือ colum
+             flex-wrap: กำหนดการกระเถอบ ลงล่างของ item ใน container
+             flex-flow: ผสมกันระหว่าง flex-wrap  flex--flow
+             jusitify-content: จัด item ในแนวนอน
+             align-item: จัด item ในแนวตั้ง
+             align-content: การจัด flex line
+            </h3>
+    
+
+            <h3>ข้อมูลที่จะจัดด้วย flex layout ต้องมีส่วนประกอบ 2 อย่างก่อน<br>
+                คือ 1. element ที่เป็น parent ทำหน้าที่เป็น container <br> 
+                   2. element ที่เป็น child ทำหน้าที่เป็น item จะยกตัวอย่างด้วยการใช้ div</h3>
+
+           <div class="flexcontainer">
+
+               <div class="flexitem1"> div 1</div>
+               <div class="flexitem2"> div 2</div>
+               <div class="flexitem3"> div 3</div>
+               <div class="flexitem4"> div 4</div>
+               <div class="flexitem5"> div 5</div>
+               <div class="flexitem6"> div 6</div>
+               <div class="flexitem7"> div 7</div>
+               <div class="flexitem8"> div 8</div>
+               <div class="flexitem9"> div 9</div>
+
+           </div>
+
+
+
+
+
+
+<h1>13. เรื่อง position</h1>
+       <!-- static   content เลื่อนตามการ scroll เม้าส์ scroll แล้วหาย
+       fixed    content ไม่เลื่อนตาม scroll เม้าส์ scroll แล้วไม่หาย
+       relative  เลื่อนออกจากตำแหน่งเดิม
+       absolute  เลื่อนออกจากมุมซ้ายบนสุดขอหน้าจอ
+       sticky    ตอนแรกไหลแบ relative ไปก่อน พอถึงตำแหน่งนึงมันจะ
+                 fix เอาไว้  มักใช้ sticky ที่ตำแหน่ง top หรือ bottom -->
 
 
 
 </body>
-</html>
+</html> 

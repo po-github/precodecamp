@@ -1,14 +1,394 @@
 
+  /* เนื่องจากในไฟล์ html ได้กำหนดแล้วว่าไฟล์นี้เป็น stylesheet = เป็นชีทที่ใช้กำหนดค่าของ style 
+  ดังนั้นไม่จำเป็นต้องพิมพ์ tag style ทั้งในไฟล์นี้และไฟล์ html
+
          การพิมพ์คำสั่งของ CSS แบบ external CSS จะอธิบายในไฟล์นี้กำหนด selector ที่ต้องการกำหนดค่า 
          ซึ่ง selector จะเป็น ID name หรือ Class name ก็คือสิ้งที่อยู่ในเครื่องหมายฟันหนูของ 
-         class="_N_A_M_E_" หรือ id="_N_A_M_E_"
+         class="_N_A_M_E_" หรือ id="_N_A_M_E_" */
 
 
-            .selector { 
+            /* .selector { 
                        property: value;
                        property: value;
                        property: value;
-                      }
+                      } */
+            
+        
+            .heading_h2 {
+                         color: red;
+                        }
+
+                        
 
 
+
+
+
+  /* *เพิ่มเติม* การใช้ selector แบบ idname ต่างกับ classname ตรงที่
+
+          
+                idname ต้องมีเครื่องหมาย # นำหน้า idname
+
+                classname ต้องมีเครื่องหมาย . นำหน้า classname */
+
+
+
+
+
+
+
+
+  /* *เพิ่มเติม* เรื่อง Pseudo-class 
+               
+              การเรียกใช้งาน Pseudoclass ไม่จำเป็นต้องกำหนด idname หรือ classname ในไฟล์ html
+              สามารถเรียกใช้โดยพิมพ์ชื่อ tag ที่ต้องการกำหนดเป็น Pseudoclass ได้เลย
+         
+              ตัวอย่างที่1 เป็นการกำหนด Pseudoclass ให้กับ tag input ดังนั้นทุกที่ที่มี tag input จะโดน selector นี้สั่งว่าอยู่
+              เมื่อโดนติ๊ก(check) ขนาดจะกลายเป็น 40 x 40 px */
+
+
+            input:checked {
+                           width: 40px;
+                           height: 40px;
+                          }
+
+
+           /* ตัวอย่างที่2 เป็นการกำหนด Pseudoclass ให้กับ tag div ดังนั้นทุกที่ที่มี tag div จะโดน selector นี้สั่งว่า
+                   เมื่อเม้าเลื่อนผ่าน content ใน div จะเปลี่ยนเป็นสีแดง */
+
+            div:hover {
+                         color: red;
+                        }
+
+
+
+
+
+  /* *เพิ่มเติม* เรื่อง Pseudo-element  จะมีผลเฉพาะต่อ element ที่มี tag < p >
+               
+           ประกอบด้วย     1 : : before          ก่อน tag นั้นให้ทำอะไร
+                         2 : : after           หลัง tag นั้นให้ทำอะไร
+                         3 : : first -letter   ที่ตัวอักษรตัวแรกของ tag นั้นให้ทำอะไร
+                         4 : : first -line     ก่อน tag นั้นให้ทำอะไร
+                         5 : : selection       ก่อน tag นั้นให้ทำอะไร
+                  
+           ยกตัวอย่าง */
+                      
+             p::before {
+                          content:"55555";
+                       }
+             div::first-letter{
+                               color: seagreen;
+                              }
+
+
+
+
+
+
+
+
+/* *เพิ่มเติม  เรื่อง Combinator */
+
+               /* 1. space */ 
+                              /* เป็น CSS ที่สั่งให้ tag ที่มี selector SpaceCombinator ทำงานดังนี้คือ
+                              ให้ tag div ที่อยู่ภายในทั้งหมดเป็นสีฟ้า
+                              ให้ tag span ที่อยู่ภายในทั้งหมดเป็นสีแดงมะเขือเทศ */
+
+                     #SpaceCombinator div {
+                                         color: springgreen;
+                                        }
+                               
+                     #SpaceCombinator span {
+                                         color: tomato;
+                                         }
+              
+              /* 2. > */
+                              /* เป็น CSS ที่สั่งให้ เลือก child ของ p ป็นสีม่วงก่อนหลังจากนั้น
+                              ทั้งหมดที่ไม่ใช่ child ของ p ให้เป็นสีน้ำตาล */
+
+                    .combinatormore p span {
+                            color: saddlebrown
+                           }
+                    .combinatormore p > span {
+                              color: purple;
+                             }
+
+
+              /* 3. +  กับ   ~ */
+
+
+                    .combinatorplus + div {
+                                           color: yellow;
+                                          }
+                     
+                     .combinatorUnderAll ~ div {
+                                                color: teal;
+                                               }
+
+
+
+
+
+
+
+
+
+
+/* เพิ่มเติมเรื่อง Attribute selector */
+
+              /* 1. [  attribute  ] */
+                          
+                          /* เอา type ทุกแบบ */
+                          input[type] {
+                                       color: tomato;
+                                      }
+
+                          /* เอา type แบบ password */
+                          input[type="password"]{
+                                                 background-color: yellow;
+                                                }
+
+                          /* value แบบห้ามติดอักษรอื่น */
+                          input[title~="this"]{
+                                              background-color: palevioletred;
+                                             }
+
+                          /* ขึ้นต้นด้วย value ตามด้วยช่องว่าง หรือ - */
+                          input[title|="input"]{
+                                           background-color: orange;
+                                          }
+                                          
+                          /* ขึ้นต้นด้วย value */
+                          input[title^="input"]{
+                                                background-color: green;
+                                               }
+
+
+
+
+
+
+
+
+/* เพิ่มเติมเรื่อง ฺborder */
+                   /* จะดูอันอันไหนเปิดคอมเม้นอันนั้นปิดคอมเม้นอันอื่นนะ */
+
+                     .borderparagraph {
+                                   
+                                   /* 1.การทำให้เกิดเส้นกรอบต้องพิมพ์คำสั่ง border : size style color; */ 
+
+                                          border:10px solid royalblue;
+
+
+                                   /* 2.การกำหนดความกว้างด้วย width จะเป็นการ fix เลยว่าจะให้ content นั้นกว้างแค่ไหนเวลา
+                                     ยืดหรือหดหน้าจอทางกว้าง content จะไม่ยืดหดตาม    */
+
+                                          /* width: 50vw */
+
+                                   /* 3.การกำหนดความกว้างที่กรอบจะถูกบีบให้แคบได้มากสุด ถ้าเราบีบทางกว้างแคบเกินกว่าค่านี้ content จะไม่มีการขึ้นบรรทัดใหม่
+                                     แต่จะมองไม่เห็น content ส่วนเกินทางกว้างไปเเลย */
+
+                                         /* min-width: 1000px; */
+
+                                   /* 4.การกำหนดความกว้างที่จะยืดกรอบ content สูงสุดได้ หากขยายหน้า browser ทางกว้างกว้างกว่าค่า max นี้ไปแล้ว
+                                     content จะไม่กว้างออกตามหน้า browser ที่กว้างขึ้นอีก */
+
+                                         /* max-width: 400px; */
+
+
+                                   /* 5.การกำหนดทั้งความสูงและความสูงสูงสุดหลักการเดียวกับเรื่องความกว้าง */
+                                         /* height: ; */
+                                         /* max-height: ; */
+                                   
+                                   /* 6.รูปแบบของเส้น */
+
+                                         /* border-style: ; */
+
+                                   /* 7.สีของเส้น */
+
+                                         /* border-color: ; */
+                                   
+                                   /* 8. ทำให้กรอบมันไม่มีมุมด้วย */
+
+                                        /* border-radius: ; */
+                            
+                                     }
+
+
+
+
+
+ 
+/* เพิ่มเติมเรื่อง table  */
+
+             /* การตกแต่ง table จะต้องเขียนคำสั่งต่อไปนี้ก่อน
+
+             table,td,th{
+
+                        } */
+      /* การแต่ง border ของตารางทำอะไรได้บ้างดังนี้
+       1. border: เป็การกำหนดกรอบให้ตาราง
+       2. border-collapse: 
+       3. border-spacing:
+       4. boder-side: ขนาดของตาราง
+       5. caption-side: คำอธิบายตาราง top  /  bottom
+       6. emthy-cell: แสดงตารางว่างหรือไม่แสดง
+       7. table-layout: fixed / auto ความกว้างเซลล์เท่ากันหรือตามความยาวข้อมูล
+       */
       
+      /* ตัวอย่างการแต่ง border ของตารางด้วย shorthand */
+            
+            table,td,th{
+                        border: 2px solid orangered;
+                        caption-side: bottom;                      
+                        
+                       }
+
+
+
+
+
+
+/* เพิ่มเติมเรื่องการปรับแต่งรูปภาพ */ 
+
+              img {
+                   width: 600px;
+                   height: 400px;
+                   border: 10px solid rgba(28, 140, 185, 0.76);
+                   opacity: 0.8;
+                   border-radius: 50px;        
+                  }
+
+              .bgtest {
+                       width: 500px;
+                       height: 500px;
+                       background-color: salmon;
+                      }
+            
+
+              .พื้นหลังรูปภาพ {
+                            width: 1000px;
+                            height: 600px;
+                            background-image: url(https://goldenretrieversociety.com/wp-content/uploads/2020/03/Golden-Retriever-Teeth-Care.png);
+                           }
+ 
+              body {
+                     background-color: seagreen;
+            
+                    }
+
+
+
+
+
+/* เพิ่มเติมเรื่องการใช้ Display */
+
+       /* คำสั่งข้างล่างเป็นการเปลี่ยนคุณสมบัติข้อมูลซึ่งเดิมใช้ tag p ใน htmlซึ่ง
+       มีสมบัติเป็น block level (อยู่คนละบรรทัดกัน)
+       ให้เป็น inline level (ซึ่งอยู่บรรทัดเดียวกัน) */
+             .displaytest {
+                           display: inline;
+                          }
+
+       /* ถามว่าทำไมเราต้องอยากเปลี่ยน เพราะการมีสมบัติเป็น inline ทำให้เราสามารถแต่ง
+       border และ background color ของข้อความได้ (เนื้อหาเรื่อง padding กับ margin)
+       แต่ถ้าเป็น block เราจะแต่งได้แค่ front ของข้อความเท่านั้น */
+
+
+
+
+
+
+
+/* เพิ่มเติมเรื่อง grid layout */
+
+     /* ****ต้องมีการประกาศ display: grid; ใน container ก่อนเสมอ****** */
+
+     .gridcontainer {
+                     display: grid;
+                     grid-template-columns: auto auto auto;
+                     background-color: silver;
+                     grid-template-rows: auto auto auto;
+                     grid-gap: 20px;
+
+                     justify-content: center; ทำให้ item อยู่ตรงกลางหน้าจอ
+                     /* justify-content: space-between; ทำให้พื้นที่ระหว่าง item ห่างเท่ากัน
+                     justify-content: space-evenly; ทำให้พื้นที่ข้าง item ห่างเท่ากัน
+                     justify-content: space-around; ทำให้พื้นที่รอบๆ item ห่างเท่ากัน */
+
+                     align-content: start; ทำให้ item อยู่บน
+                     /* align-content: center; ทำให้ item อยู่กลาง
+                     align-content: end; ทำให้ item อยู่ล่าง */
+                    }
+
+      /* grid-template-columns: ความกว้างคอลัม 1,2,3,....
+      grid-template-rows: ความกว้างแถว 1,2,3,.... */
+
+
+     /* การรวมช่อง/รวมitem อารมผสานเซลล์นั่นแหละ */ 
+
+
+     /* ******พวก justify กับ align จะพิมพ์คำสั่งภายใน container ส่วน
+           การรวมช่องให้พิมพ์คำสั่งภายใน item ทำไงไปดูข้างล่าง******* */
+
+      .griditem2 {
+                  /* grid-column: 1/3; */
+
+                  /* grid-column: 1/span 2; */
+
+                  /* grid-row:
+                  grid-row: */
+
+                  /* grid-area: 1/1/3/3*/                    
+                 }
+
+      .gridcontainer > div{
+                           background-color: skyblue;
+                          } 
+
+
+
+
+/* เพิ่มเติมเรื่อง flex box layout */
+
+       .flexcaontainer {
+                        display: flex;
+
+                        flex-direction: column;        
+                          /* เรียง item แนวตั้งเริ่มจาก บนลงล่าง */
+
+                        /* flex-direction: column-reverse;    */
+                          /* เรียง item แนวตั้งเริ่มจาก บนลงล่าง */
+
+                        /* flex-direction: row; */
+                          /* เรียง item แนวนอน เริ่มจาก ซ้ายไปขวา */
+                          
+                        /* flex-direction: row-reverse; */
+                          /* เรียง item แนวนอน เริ่มจาก ขวาไปซ้าย */
+
+                        /* flex-wrap: nowrap;
+                        flex-wrap: wrap-reverse;
+                        flex-flow: row;
+                        flex-flow: column-reverse; */
+                       
+                 
+                  /* การจัดพื้นที่รอบๆ item ด้วยคำสั่ง justify-content โดยคำสั่งนี้
+                  *****ต้องถูกพิมพ์ใน container  และการใช้ justify-content จำเป็น
+                  *****ต้องมีการพิมพ์ flex-wrap มาก่อนด้วย
+                  เพราะการใช้ flex-wrap ช่วยให้
+                  ขนาดของ แต่ละ item ไม่ถูกบีบให้อยู่บรรทัดเดียว ถ้าไม่มี flex-wrap 
+                  แม้ว่าเรากำหนดความกว้าง item ไว้เท่าไหร่เวลาเรทำให้ browser แคบลง
+                  item จะถูกบีบด้วย(ความกว้างจะไม่เท่ากับที่เรากำหนดไว้) */
+
+                       justify-content: space-around;   พื้นที่รอบ item เท่ากัน
+                       /* justify-content: space-between;  พื้นที่ระหวาง item เท่ากัน */
+                       /* justify-content: flex-start;     ทำให้ item ชิดซ้าย */
+                       /* justify-content: flex-end;       ทำให้ item ชิดขวา */
+                       /* justify-content: center;         ทำให้ item อยู่ตรงกลาง */
+
+                       }
+
+            /* justify/align -content กับ justify/align -item   ต่างกันตรงที่ content จัด พท *รอบ* item
+            ส่วน item เป็นการจัดตัว item เอง */
+
