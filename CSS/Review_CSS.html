@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review CSS</title>
+    <link rel="stylesheet" href="./Review_CSS.css">
+</head>
+<body>
+<h1>1. Review CSS syntax</h1>
+    <table style="width: 100%;">
+        <tr>
+            <th>คำถาม</th>
+            <th>คำตอบ</th>
+        </tr>
+
+        <tr>
+            <td>1.CSS syntax ประกอบด้วยอะไรบ้าง?</td>
+            <td> CSS syntax ประกอบด้วย <br>
+                <ol>
+                    <li>selector(ใช้ที่เลือกตำแหน่งเพื่อกำหนดลักษณะ)</li>
+                    <li>declaration : การประกาศลักษณะประกอบด้วย
+                        <ul>
+                           <li>property = คุณสมบัติ</li>
+                           <li>value = ค่าของคุณสมบัตินั้นๆ</li>
+                        </ul>
+                    </li>
+                </ol>
+            </td>
+        </tr>
+
+       <tr>
+           <td>2.การเขียน CSS มีกี่แบบอะไรบ้าง?</td>
+           <td>มี 3 แบบ <ol>
+                           <li>1. inline CSS</li>
+                           <li>2. internal CSS</li>
+                           <li>3. external CSS</li>
+                       </ol>
+           </td>
+       </tr>
+
+       <tr>
+           <td>3.selector มีกี่แบบอะไรบ้าง?</td>
+           <td>หลายแบบ ดังนี้ <br>
+               -ID <br>
+               -Class <br>
+               -Pseudo element <br>
+               -Pseudo class <br>
+               -Combinators <br>
+               -Attribute selector
+           </td>
+       </tr>
+       <tr>
+           <td>4.Combinator มีกี่แบบอะไรบ้าง?</td>
+           <td>หลายแบบ เช่น <br>
+               - decendant selector (หรือช่องว่าง) พิมพ์โดย a b  <br>
+               - child selector (>) พิมพ์โดย a > b เลือก b ซึ่งเป็น child ของ a <br>
+               - adjacent sibling selector (+) พิมพ์โดย a + b เลือก b ที่อยู่ล่าง a และติดกับ a เท่านั้น <br>
+               - general sibling selector (~) พิมพ์โดย a ~ b เลือก b ที่อยู่ล่าง a ทุกอัน
+            
+           </td>
+       </tr>
+    </table>
+<br>
+<hr>
+<br>
+
+<h1>2. Review CSS Property</h1>
+    <table style="width: 100%;">
+        <tr>
+            <td>คำถาม</td>
+            <td>คำตอบ</td>
+        </tr>
+
+        <tr>
+            <td>1.property และ value คืออะไร แตกต่างกันอย่างไร?</td>
+            <td>property คือคุณสมบัติที่เราต้องการจะปรับแต่ง เช่น  สี ฟอนต์ ความกว้าง ความยาว <br>
+                value คือค่าของคุณสมบัติ เช่น สีแดง ฟอนต์kanit 100cm 
+            </td>
+        </tr>
+
+        <tr>
+            <td>2.Property ที่สอนใน precamp มีกี่กลุ่มอะไรบ้าง?</td>
+            <td> 5 กลุ่ม ดังนี้<br>
+                <ol>
+                    <li>property for border : border, table </li>
+                    <li>property for content : color, size, font, text, list-style-type, Height, Width, background </li>
+                    <li>property for padding : top right buttom left ของ padding</li>
+                    <li>property for margin : top right buttom left ของ mergin</li>
+                    <li>property for elenment : display height width position float alight flex grid</li>
+                </ol>
+            </td>
+        </tr>
+
+        <tr>
+            <td>3.Value unit มีกี่ประเภทคืออะไรบ้าง แต่ละประเภทคืออะไร?</td>
+            <td>มี 2 ประเภท คือ
+                <ol>
+                    <li>Absolute lenghts คือหน่วยที่เป็นหน่วยวัดมาตรฐาน เช่น cm, mm, in, px, pt, pc</li>
+                    <li>Relative lenghts คือหน่วยที่เป็นหน่วยเชิงสัมพันธ์ โดยไปอย่างค่ากับอีกอย่างนึง เช่น em, ex, ch, rem, vh, vw, vmin, vmax, %</li>
+                </ol>
+            </td>
+        </tr>
+
+    </table>
+<br>
+<hr>
+<br>
+
+<h1>3. Review CSS Value, Grid, Flex, Justify, Align, Position, Z-index</h1>
+    <table style="width: 100%;">
+        <tr>
+            <td>คำถาม</td>
+            <td>คำตอบ</td>
+        </tr>
+        <tr>
+            <td>1. Value ใน Display property มีอะไรบ้าง?</td>
+            <td>
+                -inline  : ข้อความอยู่บรรทัดเดียวกัน "ไม่สามารถปรับ ค.กว้าง ค.ยาว ค.สูง ได้" <br>
+                -block  : ข้อความอยู่คนละบรรทัดกัน <br>
+                -content  : ทำให้ element นั้นกลายเป็น content "ไม่สามารถปรับ margin, padding, border, background ได้" <br>
+                -flex   <br>
+                -grid  <br>
+                -inline-block/flex/grid/table   <br>
+                -run-in 
+            </td>
+        </tr>
+        <tr>
+            <td>2. grid และ flex แตกต่างกันอย่างไร?</td>
+            <td>Flex ใช้เพื่อจัดการ layout 1 มิติ ส่วน Grid ใช้เพื่อจัดการ layout 2 มิติ <br>
+                 โดย Flex มีลักษณะของการวางของต่างๆเป็นแถวเดียว "ไม่แนวตั้งก็แนวนอน"(1มิติ)<br>
+                ส่วน grid ใช้เมื่อ item ด้านในมีการจัดวางมีลักษณะเป็น column กับ row (2มิติ) </td>
+        </tr>
+        <tr>
+            <td>3. Justify และ Align แตกต่างกันอย่างไร?</td>
+            <td>Justify ใช้จัดรูปแบบตามแนวนอน <br>
+                Align ใช้จัดรูปแบบตามแนวตั้ง
+            </td>
+        </tr>
+        <tr>
+            <td>4. position คืออะไรและมีอะไรบ้าง?</td>
+            <td>คือ ตำแหน่งการจัดวางของ CSS ประกอบด้วย <br>
+                1. Static block จะโดนเลื่อนตามหน้าเว็บเมื่อ scroll เม้า (default) <br>
+                2. Relative block เลื่อนจากตำแหน่งเดิมตามที่เรากำหนดว่าจะดันจากทางไหน ซ้าย ขวา บน ล่าง <br>
+                3. Fixed   block เลื่อนเกาะไปกับหน้าเว็บเมื่อ scroll เม้า <br>
+                4. Absolute เลื่อนออกจากมุมซ้ายบนสุดของหน้าจอตามการกำหนดว่าดันจากทาง ซ้าย ขวา บน ล่าง <br>
+                5. Sticky เป็นการผสมกันระหว่าง relative กับ fixed <br>
+                6. Z-index เป็นการจัด element บนหน้าจอในรูปแบบ layer บนหน้าจอ โดยค่าน้อยอยู่หลังสุดส่วนค่ามากอยู่หน้า
+                   <br> โดยค่า default ของทุก element มีค่า Z-index = 0
+            </td>
+        </tr>
+        <tr>
+            <td>5. Z-index คืออะไร ใช้อย่างไร?</td>
+            <td>เป็นการจัด element บนหน้าจอในรูปแบบ layer บนหน้าจอ โดยค่าน้อยอยู่หลังสุดส่วนค่ามากอยู่หน้า
+                โดยค่า default ของทุก element มีค่า Z-index = 0</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
