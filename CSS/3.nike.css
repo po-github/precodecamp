@@ -60,3 +60,11 @@ a {
 .h2right {
     padding: 20px;
 }
+
+.covid {
+    display: flex;
+    background-color: #f5f5f5;
+    justify-content: center;
+    padding: 17px;
+}
+
