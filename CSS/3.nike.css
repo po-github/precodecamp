@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: "Prompt", sans-serif;
+    text-decoration: none;
+}
+
+a {
+    color: rgb(95, 94, 94);
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.head1 {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1px solid;
+    border-color:rgb(95, 94, 94);
+}
+
+.h1left {
+    display: flex;   
+}
+
+
+.h1left > div {
+    padding: 6px;
+    border-right: 1px solid;
+}
+
+.h1right {
+    display: flex;   
+}
+
+.h1right > div {
+    padding: 6px;
+}
+
+.head2 {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1px solid;
+}
+
+.h2left {
+    padding: 20px;
+}
+.h2center {
+    display: flex;
+    justify-content: space-around;
+}
+
+.h2center > div {
+    padding: 20px;
+}
+
+.h2right {
+    padding: 20px;
+}
