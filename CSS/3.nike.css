@@ -46,8 +46,15 @@ a {
 }
 
 .h2left {
-    padding: 20px;
+    padding: none;
+    margin-left: 30px;
 }
+
+.h2left > img {
+    width: 80px;
+    height:55px;
+}
+
 .h2center {
     display: flex;
     justify-content: space-around;
@@ -68,3 +75,65 @@ a {
     padding: 17px;
 }
 
+.stickybar {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    font-size: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-weight: 100;
+    position: sticky;
+    top: 0px;
+}
+
+.menpic {
+    display: grid;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: center;
+    min-width: 50px;
+}
+
+.menpic > img {
+    width: 100vw;
+    height: auto;
+}
+
+.shcontainer {
+    display: grid;
+    grid-template-columns: 450px 450px 450px;
+    justify-content: center;
+}
+
+.shcap {
+    display: flex; 
+}
+
+.hitcontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.hit1 {
+    margin-right: 30px;
+}
+
+.dencontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.jpcontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.jp1 {
+    margin-right: 15px;
+}
+
+.jp2 {
+    margin-right: 15px;
+}
