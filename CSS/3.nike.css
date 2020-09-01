@@ -137,3 +137,12 @@ a {
 .jp2 {
     margin-right: 15px;
 }
+
+
+.footer {
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    margin-top: 50px;
+    justify-content: space-evenly;
+    
+}
