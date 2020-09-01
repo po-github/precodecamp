@@ -139,10 +139,95 @@ a {
 }
 
 
-.footer {
+.category {
     display: grid;
-    grid-template-columns: auto auto auto ;
+    grid-template-columns: auto auto auto auto;
     margin-top: 50px;
-    justify-content: space-evenly;
+    font-size: 12px;
+    justify-content: center;
+    padding: px;        
+}
+
+.wdth {
+    margin-right: 70px;
+}
+
+.hhh {
+    color: black;
+    font-weight: 700;
+}
+
+.ftcontainer {
+    background-color: black;
+    margin-top: 100px;
+}
+
+
+.footer-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid;
     
+    margin-left: 250px;
+    margin-right: 250px;
+   
+
+}
+
+.column-menu {
+    display: flex;
+    flex-direction: row;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.column-menu > div {
+    font-size: 14px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.ftmenucol1 {
+    margin-right: 60px;
+}
+
+.ftmenucol2 {
+    margin-right: 60px;
+}
+
+.social-menu {
+    margin-right: 60px;   
+}
+
+.social-menu > ul > li {
+    display: inline;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.footer-sub {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.front-sub {
+    display: flex;
+}
+
+.front-sub > div {
+    font-size: 10px;
+    padding: 5px;
+}
+
+.back-sub {
+    display: flex;
+}
+
+.back-sub > div {
+    font-size: 10px;
+    padding: 5px;
 }
