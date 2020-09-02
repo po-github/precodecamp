@@ -39,6 +39,11 @@ a {
     padding: 6px;
 }
 
+.iconh1 {
+    font-size: 15px;
+   
+}
+
 .head2 {
     display: flex;
     justify-content: space-between;
@@ -145,7 +150,8 @@ a {
     margin-top: 50px;
     font-size: 12px;
     justify-content: center;
-    padding: px;        
+    padding: px;  
+    margin-bottom: 20px;      
 }
 
 .wdth {
@@ -159,7 +165,7 @@ a {
 
 .ftcontainer {
     background-color: black;
-    margin-top: 100px;
+    
 }
 
 
@@ -167,28 +173,46 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 1px solid;
-    
+    border-bottom: 1px solid gray;
+    background-color: black;
     margin-left: 250px;
     margin-right: 250px;
-   
-
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+    
 }
 
 .column-menu {
     display: flex;
     flex-direction: row;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: black;
+    position: relative;
+    top: 20px;
+    
 }
 
 .column-menu > div {
     font-size: 14px;
+    background-color: black;
+}
+
+.column-menu > div > ul > li {
+    color: white;
+    background-color: black;
+}
+
+.social-menu > ul > li {
+    color: gray;
+    background-color: black;
 }
 
 li {
-    list-style-type: none;
+    list-style-type: none;   
 }
+
+
 
 .ftmenucol1 {
     margin-right: 60px;
@@ -199,7 +223,11 @@ li {
 }
 
 .social-menu {
-    margin-right: 60px;   
+    margin-right: 60px;
+    background-color: black;
+    position: relative;
+    top: 20px;
+
 }
 
 .social-menu > ul > li {
@@ -208,26 +236,40 @@ li {
     font-size: 20px;
 }
 
+
 .footer-sub {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 20px;
+    background-color: black;
 }
 
 .front-sub {
     display: flex;
+    background-color: black;
+    margin-left: 40px;
 }
 
 .front-sub > div {
     font-size: 10px;
     padding: 5px;
+    background-color: black;
+    color: white;
 }
 
 .back-sub {
     display: flex;
+    background-color: black;
+    margin-right: 40px;
 }
 
 .back-sub > div {
     font-size: 10px;
     padding: 5px;
+    background-color: black;
+    color: white;
+}
+
+ i {
+    background-color: black;
 }
