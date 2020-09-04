@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Responsive Web</title>
+    <link rel="stylesheet" href="./fontawesome-free-5.14.0-web/css/all.min.css">
+    <style>
+      
+
+        img {
+            width: 250px;
+            height: 250px;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+        h1 {
+            text-align: center;
+        }
+
+         div{
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        div > div {
+            padding: 5%;
+            border: 1px black solid;
+        }
+
+        div > h3 {
+            outline: dotted gray 2px;
+            padding: 2px;
+        }
+
+        .container {
+            display: grid;
+            margin: 50px;
+            grid-gap:20px
+        }
+
+        .footer {
+            border:dashed gray 3px ;
+            padding: 5px;
+            width: 80%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+  
+        a {
+            text-decoration: none;
+            color: gray;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+       @media only screen and (max-width: 560px) {
+           .container {
+               grid-template-columns: auto;
+           }
+           div > div {
+               min-width: 30px;
+           }
+
+           .footer {
+               min-width: 300px;  
+           }
+       }
+
+       @media only screen and (min-width: 561px) and (max-width: 840px) {
+           .container {
+               grid-template-columns: auto auto;
+               grid-gap: 5%;
+               margin-bottom: 150px;
+               
+           }  
+           div>div {
+               min-width: 320px;
+           }
+       }
+
+      @media only screen and (min-width: 841px) {
+          .container {
+              grid-template-columns: auto auto auto;
+              grid-gap: 20px;
+              margin-bottom: 50px;
+              
+          }
+          div>div {
+              min-width: 320px;
+          }
+
+      }
+
+
+       .img1 {
+           width: 280px;
+           height: 200px;
+       }
+       .img2 {
+           width: 300px;
+           height: 150px;
+       }
+       .img3 {
+           width: 250px;
+           height: 200px;
+       }
+       .img4 {
+           width: 250px;
+           height: 180px;
+       }
+       .img5 {
+           width: 200px;
+           height: 100px;
+       }
+       .img6 {
+           width: 200px;
+           height: 150px;
+       }
+    </style>
+    
+</head>
+<body>
+    <div><img src="./pngegg.png" alt="" class="pic"> </div>
+
+    <h1>Apple Inc.</h1>
+    
+        <div class="container">
+            <div><h3><i class="fas fa-computer-speaker"></i>Mac Pro</h3> <img class="img1" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mac-pro-2019-gallery2?wid=4000&hei=3072&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1572644161517" alt=""> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, facilis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, vel!</div>
+            <div><h3><i class="fas fa-desktop"></i> iMac Pro</h3> <br> <img class="img2" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/imacpro-27-retina-config-hero?wid=1200&hei=630&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1584055611394" alt=""> <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, facilis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, vel!</div>
+            <div><h3><i class="fas fa-laptop"></i> Macbook Pro</h3> <img class="img3" src="https://www.macthai.com/wp-content/uploads/2020/05/Screen-Shot-2563-05-04-at-19.37.21.png" alt=""> <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, facilis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, vel!</div>
+            <div><h3><i class="fas fa-desktop"></i> iMac</h3> <br> <img class="img4" src="https://d2pa5gi5n2e1an.cloudfront.net/global/images/product/desktops/iMac_Retina_5K/iMac_Retina_5K_L_1.jpg" alt=""> <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, facilis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, vel!</div>
+            <div><h3><i class="fas fa-laptop"></i> Macbook Air</h3> <br> <img class="img5" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-silver-select-201810?wid=1200&hei=630&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1541713861325" alt=""> <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, facilis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, vel!</div>
+            <div><h3><i class="far fa-hdd"></i> Mac mini</h3> <img class="img6" src="https://www.apple.com/newsroom/images/product/mac/standard/mac-mini_top-down_10302018_LP_hero.jpg.og.jpg" alt=""> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, facilis?</div>
+        </div>
+
+    <div class="footer"><h2>More Information Go to. . .</h2><a href="https://www.apple.com/th/?afid=p238%7CsZW0IsGqu-dc_mtid_18707vxu38484_pcrid_456415720724_pgrid_16175209036_&cid=aos-th-kwgo-brand--slid---product--"><i class="fab fa-apple"></i> Apple Thailand</a></div>
+
+    </body>
+</html>
