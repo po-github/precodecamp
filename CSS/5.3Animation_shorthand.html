@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation_shorthand</title>
+
+    <style>
+        .microsoft {
+               display: grid;
+               grid-template-columns: 220px 220px;
+               justify-content: center;
+               margin-top: 200px;
+
+           }
+
+           .microsoft > div {
+               margin: 10px;
+           }
+
+           .animationtest1 {
+               width: 200px;
+               height: 200px;
+               background-color: brown;
+               animation: shorthand alternate ease 5s 3s infinite;
+           }
+
+           .animationtest2 {
+               width: 200px;
+               height: 200px;
+               background-color: forestgreen;
+               animation: shorthand reverse ease 4s 3s infinite;
+           }
+
+           .animationtest3 {
+               width: 200px;
+               height: 200px;
+               background-color: sienna;
+               animation: shorthand  linear 5s 3s infinite;
+           }
+
+           .animationtest4 {
+               width: 200px;
+               height: 200px;
+               background-color: brown;
+               animation: shorthand ease-in 5s 1s infinite;
+           }
+
+           @keyframes shorthand {
+               0% {
+                   background-color: green;
+               }
+               25% {
+                    background-color: blue;
+               }
+               50% {
+                    background-color: red;
+               }
+               75% {
+                    background-color: black;
+               }
+               100% {
+                     background-color: yellow;
+               }
+           }
+
+           
+    </style>
+
+
+    
+</head>
+<body>
+    <div class="microsoft">
+        <div class="animationtest1"></div>
+        <div class="animationtest2"></div>
+        <div class="animationtest3"></div>
+        <div class="animationtest4"></div>
+     </div>
+</body>
+</html>
