@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+
+    <style>
+        .div {
+            height: 100px;
+            width: 100px;
+            background-color: skyblue;
+            animation-name: example;
+             animation-duration: 10s;
+        }
+
+    /* 
+    1. ใช้ @keyframe แบบ from...to....           */
+
+        /* @keyframes example {
+            from {
+                background-color: skyblue;
+                height: 300px;
+                width: 300px;
+                margin: auto;
+
+            }
+
+            to {
+                background-color: black;
+                height: 100px;
+                width: 100px;
+                margin: auto;
+                
+ 
+            }
+        } */
+    /* 
+    2. ใช้ @keyframe แบบเปอร์เซ็น                    */
+
+        @keyframes example {
+            0% {
+                background-color: peachpuff;
+                
+            }
+
+            25% {
+                 background-color: red;
+                 border: 10px solid black;
+                 margin-top: 300px;
+            }
+
+            50% {
+                 background-color: pink;
+                 margin-top: 200px;
+                 margin-left: 300px;
+                 border: none;
+                 width: 500px;
+                 height: 500px;
+                 visibility: hidden;
+                 
+            }
+
+            100% {
+                  background-color: darkblue;
+                  margin-left: 300px;
+                  border: 10px solid black;
+            }
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <!-- 
+         1. ตั้งชื่อ element ด้วย animation-name
+         2. กำหนดระยะเวลาที่จะให้ animation แสดงผลด้วย animation-duration 
+         3. เอาชื่อไป link กับคำสั่ง @keyframe 
+    -->
+    
+    <!-- 
+        กำหนด div ที่จะนำมาทำ animation     -->
+
+     <div class="div" ></div>
+    
+</body>
+</html>
